@@ -4,7 +4,7 @@ import requests
 # 签到
 URL = "https://api.juejin.cn/growth_api/v1/check_in?aid=2606"
 # 首次抽奖
-LOTTERY = 'https://api.juejin.cn/growth_api/v1/lottery/draw'
+LOTTERY = 'https://api.juejin.cn/growth_api/v1/lottery/draw?aid=2606'
 api_list = [URL, LOTTERY]
 herder = {
     'referer': 'https://juejin.cn/',
