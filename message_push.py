@@ -7,10 +7,6 @@ def get_access_token():
     获取access_token
     :return:
     """
-    # access_token = conn.get_value('access_token')
-    # if access_token:
-    #     return access_token
-    print(sys.argv)
     corpid = sys.argv[4]
     corpsecret = sys.argv[3]
     url = 'https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=%s&corpsecret=%s' % (corpid, corpsecret)
