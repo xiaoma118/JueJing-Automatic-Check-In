@@ -26,4 +26,4 @@ jobs:
           pip install requests
       - name: Startup file
         run: |
-          python main.py '${{ secrets.COOKIE }}'
+          python main.py '${{ secrets.COOKIE }}' '${{ secrets.AgentId }}' '${{ secrets.Secret }}' '${{ secrets.EnterpriseId }}'
