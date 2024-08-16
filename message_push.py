@@ -12,7 +12,7 @@ def get_access_token():
     #     return access_token
     print(sys.argv)
     corpid = sys.argv[4]
-    corpsecret = sys.argv[2]
+    corpsecret = sys.argv[3]
     url = 'https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=%s&corpsecret=%s' % (corpid, corpsecret)
     resp = requests.get(url=url)
     access_token = resp.json()['access_token']
@@ -31,7 +31,7 @@ def push_content(content='消息推送测试'):
         "toparty": "1",
         "totag": "",
         "msgtype": "text",
-        "agentid": sys.argv[1],
+        "agentid": sys.argv[2],
         "text": {
             "content": content
         },
