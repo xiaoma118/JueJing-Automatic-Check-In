@@ -1,6 +1,9 @@
 # 签到、抽奖
 import sys
 import requests
+
+from message_push import push_content
+
 # 签到
 URL = "https://api.juejin.cn/growth_api/v1/check_in?aid=2606"
 # 首次抽奖
@@ -25,6 +28,8 @@ def access_check_in():
         if resp.status_code == 200:
             print('请求成功')
             print(resp.text)
+            push_content(resp.text)
+
 
 
 if __name__ == '__main__':
